@@ -33,7 +33,7 @@ module "eks" {
     cluster_version = "1.31"
     
     cluster_addons = {
-        aws-ebs-csi-driver      = { most_recent = true }
+        #aws-ebs-csi-driver      = { most_recent = true }
         coredns                 = {
       configuration_values = jsonencode({
         tolerations = [
@@ -47,7 +47,7 @@ module "eks" {
         ]
       })
     }
-        eks-pod-identity-agent  = { most_recent = true }
+        #eks-pod-identity-agent  = { most_recent = true }
         kube-proxy              = { most_recent = true }
     }
     

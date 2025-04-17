@@ -40,8 +40,9 @@ spec:
         - key: "karpenter.k8s.aws/instance-generation"
           operator: Gt
           values: ["2"]
+      
   limits:
-    cpu: 1000
+    cpu: 0
   disruption:
     consolidationPolicy: WhenEmpty
     consolidateAfter: 30s
