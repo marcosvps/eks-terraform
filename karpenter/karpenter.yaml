@@ -16,6 +16,8 @@ spec:
   tags:
     karpenter.sh/discovery: marcos-porto-eks-cluster
 ---
+
+
 apiVersion: karpenter.sh/v1
 kind: NodePool
 metadata:
@@ -42,7 +44,7 @@ spec:
           values: ["2"]
       
   limits:
-    cpu: 0
+    cpu: 4
   disruption:
     consolidationPolicy: WhenEmpty
     consolidateAfter: 30s
